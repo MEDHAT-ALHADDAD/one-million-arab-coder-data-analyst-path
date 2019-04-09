@@ -1,4 +1,4 @@
-﻿1-SELECT region.name region_name ,sales_reps.name
+﻿SELECT region.name region_name ,sales_reps.name
  sales_name,accounts.name 
 account_name
  FROM region
@@ -9,7 +9,7 @@ account_name
   ON accounts.sales_rep_id = sales_reps.id
 ORDER BY accounts.name
 
-2-SELECT region.name region_name ,sales_reps.name
+SELECT region.name region_name ,sales_reps.name
  sales_name,accounts.name 
 account_name
  FROM region
@@ -22,7 +22,7 @@ account_name
 ORDER BY accounts.name
 
 
-3-SELECT region.name region_name ,sales_reps.name sales_name
+SELECT region.name region_name ,sales_reps.name sales_name
 ,accounts.name
  account_name
  FROM region
@@ -35,7 +35,7 @@ ORDER BY accounts.name
 ORDER BY accounts.name
 
 
-4-SELECT  region.name region_name,accounts.name
+SELECT  region.name region_name,accounts.name
  account_name,orders.standard_qty, orders.total_amt_usd/(orders.total+0.01) "unit price"
  FROM orders 
  JOIN accounts 
@@ -46,7 +46,7 @@ ORDER BY accounts.name
  JOIN region 
   ON sales_reps.region_id = region.id
 
-5-SELECT  region.name region_name,accounts.name account_name,orders.standard_qty
+SELECT  region.name region_name,accounts.name account_name,orders.standard_qty
 ,  orders.poster_qty, orders.total_amt_usd/(orders.total+0.01) unit_price
  FROM orders 
  JOIN accounts 
